@@ -6,6 +6,8 @@ info:
 servers:
   - url: http://localhost:5000
     description: Local Server
+  - url: https://pet-adoption-backend-vp5x.onrender.com
+    description: Production Server
 components:
   securitySchemes:
     bearerAuth:

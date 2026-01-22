@@ -29,11 +29,7 @@ app.use(cors({
     credentials: true
 }));
 
-// Swagger Documentation
-// YAML.load needs to be handled differently or we can keep require for yamljs if it doesn't support ESM defaults well, 
-// but usually loading the file content and parsing it is better in ESM if the lib doesn't support it 
-// However, yamljs seems to work if we just import it.
-// Let's stick to the plan. Note: yamljs.load might be synchronous.
+
 const swaggerDocument = YAML.load('./swagger.yaml');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
